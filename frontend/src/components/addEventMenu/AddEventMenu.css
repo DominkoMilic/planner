@@ -1,0 +1,49 @@
+.add-event-menu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 255, 255, 0.3);
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-event-menu-container {
+  width: 70%;
+  height: 80%;
+  background-color: burlywood;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.top-add-event-menu {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.top-add-event-menu button {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: darkred;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border-top-right-radius: 4px;
+  border: none;
+}
+
+.top-add-event-menu button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

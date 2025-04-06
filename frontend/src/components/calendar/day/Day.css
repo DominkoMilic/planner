@@ -1,0 +1,121 @@
+.day-block,
+.day-block-before,
+.day-block-after {
+  width: 90%;
+  height: 90%;
+  background-color: wheat;
+  border: 2px solid black;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.day-block-after,
+.day-block-before {
+  background-color: rgb(195, 195, 174);
+}
+
+.day-block-after .event-display,
+.day-block-before .event-display {
+  background-color: rgb(173, 173, 150);
+}
+
+.day {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.day-number {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10%;
+  width: 90%;
+  padding: 5%;
+  font-size: large;
+  font-weight: bold;
+  margin: 3px;
+}
+
+.today {
+  max-height: 10%;
+  border-radius: 20%;
+  border: 2px solid black;
+  width: auto;
+  background-color: rgb(210, 210, 190);
+}
+
+.day-of-the-week-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgb(222, 222, 200);
+  width: 90%;
+  height: 50%;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.day-underline {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 2px solid black;
+}
+
+.event-display {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #d8c9a3;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.event-display::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.event-display::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.event-display::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.event-display::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.single-event-calendar {
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+.more {
+  margin-left: 5%;
+}
+
+.event-color-calendar {
+  width: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid black;
+}

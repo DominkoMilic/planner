@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;700&display=swap");
+
+.sign-in-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(179, 255, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-container {
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  background-color: rgb(207, 207, 189);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+.sign-in-text {
+  width: 40%;
+  height: 90%;
+  background-color: beige;
+  border-right: 2px solid rgb(158, 158, 146);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-form {
+  width: 40%;
+  height: 90%;
+  background-color: beige;
+  border-left: 2px solid rgb(158, 158, 146);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sign-in-text h1,
+.sign-in-text h2 {
+  margin: 10%;
+}
+
+.sign-in-form img {
+  width: 32px;
+  height: 32px;
+  margin: 5%;
+}
+
+.sign-in-form button {
+  background-color: rgb(82, 207, 166);
+  font-size: large;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin: 10%;
+  width: 60%;
+  min-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-form button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.sign-in-form h1 {
+  margin: 10%;
+}
+
+@media (max-width: 1000px) {
+  .sign-in-container {
+    flex-direction: column;
+    padding: 5%;
+    height: 90%;
+  }
+
+  .sign-in-text {
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(158, 158, 146);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .sign-in-form {
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    border-top: 2px solid rgb(158, 158, 146);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .sign-in-form img {
+    width: 24px;
+    height: 24px;
+    margin: 2%;
+  }
+}
