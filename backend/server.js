@@ -1,32 +1,35 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const MongoStore = require("connect-mongo");
+const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoute");
+require("./config/passport");
 const userDataRoute = require("./routes/userDataRoute");
 const addPlanRoute = require("./routes/addPlanRoute");
 const deletePlanRoute = require("./routes/deletePlanRoute");
 const plansRoute = require("./routes/findAllPlansRoute");
 const editPlanRoute = require("./routes/editPlanRoute");
 
-const MongoStore = require("connect-mongo");
-
 dotenv.config();
 connectDB();
 
 const app = express();
 
+app.use(express.json());
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "your-secret-key",
+    secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: MongoStore.create({
       mongoUrl: process.env.MONGO_URI,
+      collectionName: "sessions",
       ttl: 14 * 24 * 60 * 60,
     }),
     cookie: {
