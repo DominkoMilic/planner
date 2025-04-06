@@ -1,5 +1,5 @@
 import React from "react";
-import "./colorWheel.css";
+import "./ColorWheel.css";
 
 const ColorWheel = ({ eventColor, setEventColor }) => {
   const colors = [
