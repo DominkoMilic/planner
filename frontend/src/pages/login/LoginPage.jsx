@@ -5,7 +5,9 @@ function LoginPage() {
   const [isPhone, setIsPhone] = useState(window.innerWidth <= 1000);
 
   const handleGoogleLogin = () => {
-    window.open("http://localhost:5000/auth/google", "_self");
+    const backendUrl = import.meta.env.VITE_BACKEND;
+
+    window.open(`${backendUrl}/auth/google`, "_self");
   };
 
   useEffect(() => {
