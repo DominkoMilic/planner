@@ -17,7 +17,7 @@ router.get(
       expiresIn: "1h",
     });
 
-    res.redirect(`${process.env.CLIENT_URL}calendar?token=${token}`);
+    res.redirect(`${process.env.CLIENT_URL}/calendar?token=${token}`);
   }
 );
 
