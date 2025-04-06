@@ -1,6 +1,7 @@
 const fetchUserEmail = async () => {
   try {
-    const response = await fetch(`http://localhost:5000/api/auth/user`, {
+    const backendUrl = import.meta.env.VITE_BACKEND;
+    const response = await fetch(`${backendUrl}/api/auth/user`, {
       credentials: "include",
     });
 
@@ -31,7 +32,9 @@ const postNewPlan = async (
     const token = localStorage.getItem("token");
     const email = userEmail;
 
-    const response = await fetch("http://localhost:5000/api/newPlan/addPlan", {
+    const backendUrl = import.meta.env.VITE_BACKEND;
+
+    const response = await fetch(`${backendUrl}/api/newPlan/addPlan`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,8 +66,10 @@ const fetchAllPlans = async (email) => {
   try {
     const token = localStorage.getItem("token");
 
+    const backendUrl = import.meta.env.VITE_BACKEND;
+
     const response = await fetch(
-      `http://localhost:5000/api/plans/findPlans?email=${email}`,
+      `${backendUrl}/api/plans/findPlans?email=${email}`,
       {
         method: "GET",
         headers: {
@@ -89,8 +94,10 @@ const fetchDeletePlan = async (email, planId, setAllPlans) => {
   try {
     const token = localStorage.getItem("token");
 
+    const backendUrl = import.meta.env.VITE_BACKEND;
+
     const response = await fetch(
-      `http://localhost:5000/api/delete/deletePlan?email=${email}&planId=${planId}`,
+      `${backendUrl}/api/delete/deletePlan?email=${email}&planId=${planId}`,
       {
         method: "DELETE",
         headers: {
@@ -121,7 +128,9 @@ const postNewPlanName = async (userEmail, planId, planNewText, setAllPlans) => {
     const token = localStorage.getItem("token");
     const email = userEmail;
 
-    const response = await fetch("http://localhost:5000/api/edit/editPlan", {
+    const backendUrl = import.meta.env.VITE_BACKEND;
+
+    const response = await fetch(`${backendUrl}/api/edit/editPlan`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
