@@ -138,7 +138,7 @@
 @media (max-width: 600px) {
   .years button,
   .months button {
-    margin: 0 7%;
+    margin: 0 15%;
   }
 
   .year-selection,
