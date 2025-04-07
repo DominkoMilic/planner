@@ -1,8 +1,18 @@
 const fetchUserEmail = async () => {
+  console.log("fetch user email");
+
   try {
     const backendUrl = import.meta.env.VITE_BACKEND;
+    const token = new URLSearchParams(window.location.search).get("token");
+
+    if (!token) {
+      throw new Error("No token found in URL");
+    }
+
     const response = await fetch(`${backendUrl}/api/auth/user`, {
-      credentials: "include",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
 
     if (!response.ok) {
@@ -12,7 +22,7 @@ const fetchUserEmail = async () => {
     const data = await response.json();
     return data.email;
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching user email:", error);
     return null;
   }
 };
