@@ -165,4 +165,13 @@
   .change-title-input {
     width: 50%;
   }
+
+  .event-form-button button {
+    width: fit-content;
+  }
+
+  .existing-events,
+  .new-event-form {
+    width: 95%;
+  }
 }
